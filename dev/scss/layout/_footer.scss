@@ -1,0 +1,82 @@
+/* =============
+    Footer
+============= */
+/* =============
+    Footer
+============= */
+#footer{
+    background-color: cadetblue;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // margin-top: 60px;
+    padding-top: 30px;
+    
+    // padding-bottom: 30px;
+    @include md{
+        padding-bottom: 30px;
+    }
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: "contain contain contain";
+    }
+    >div{
+        @include xl{
+            grid-area: contain;
+        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include md{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: "social visit contact"
+        ". copyright .";
+    }
+
+    #social{
+        display: flex;
+        color: $white;
+        >li{
+            padding: 0px 16px;
+        }
+        @include md{
+            grid-area: social;
+        }
+    }
+
+    #contact{
+        display: none;
+        font-family: 'Montserrat', sans-serif;
+        @include md{
+            grid-area: contact;
+            display: grid;
+            text-decoration: none;
+        }
+    }
+
+    #copyright{
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 0px;
+        @include md{
+            grid-area: copyright;
+        }
+    }
+    
+    #title{
+        font-weight: 300;
+        text-align: center;
+        >span{
+            font-weight: 700;
+        }
+        @include md{
+            grid-area: visit;
+        }
+    }
+
+}
+}

@@ -1,0 +1,79 @@
+#rise_section{
+    height: 100vh;
+    background-color: beige;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 30px 40% 40% 30px;
+    grid-template-areas: ". bod bod2 ris"
+    ". bod bod2 ris";
+
+    #riselayout{
+    
+        grid-area: bod;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        height: 100vh;
+        width: 50vw;
+        padding-left: 50px;
+
+        h1 {
+            display: flex;
+            font-size: 7vw;
+            line-height: 80%;
+        }
+
+        b {
+            margin-top: 30px;
+        }
+
+        
+    }
+
+    #buttonContainer{
+        grid-area: bod2;
+        z-index: 2000;
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: ". ."
+        ". button"
+        ". .";
+        button{
+            grid-area: button;
+            background-image: url("/deploy/img/risebox.jpg");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin-right: -150px;
+            margin-left: 30px;
+        }
+        a{
+            // height: 300px;
+            // width: 300px;
+            // background-color: red;
+            padding: 110px;
+        }
+        height: 100%;
+        width: 100%;
+    }
+    .riseSVG{
+            // display: none;
+            grid-area: ris;
+            padding-top: 100px;
+            
+            margin-left: -600px;
+            height: 70%;
+            z-index: 1;
+            // display: flex;
+            // background-color: white;
+            // justify-content: center;
+            // align-items: center;
+        }
+
+    img{
+        // display: none;
+    }
+}

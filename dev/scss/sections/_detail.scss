@@ -1,0 +1,49 @@
+#moreImg{
+    height: 30vh;
+    width: 100%;
+    // background-position: cover;
+}
+
+#detail{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". detail .";
+    padding-top: 50px;
+    position: relative;
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+
+    >div{
+        grid-area: detail;
+        display: grid;
+        grid-template-columns: 50% auto;
+
+        button{
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: transparent;
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        section{
+            h1{
+                padding-bottom: 20px;
+            }
+
+            p{
+                padding-right: 50px;
+            }
+            padding-bottom: 30px;
+        }
+        #detail-hero{
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+    }
+}

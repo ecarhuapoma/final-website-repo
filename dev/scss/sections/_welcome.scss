@@ -1,0 +1,29 @@
+#welcome_section {
+    height: 100vh;
+    background-image: url("/deploy/img/ethan-welcome.jpg");
+    background-color: #cccccc;
+    background-position: bottom right;
+    // background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        height: 100vh;
+        width: 50vw;
+        padding-left: 50px;
+
+        h1 {
+            display: flex;
+            font-size: 10vw;
+            line-height: 80%;
+        }
+
+        b {
+            margin-top: 30px;
+        }
+    }
+}

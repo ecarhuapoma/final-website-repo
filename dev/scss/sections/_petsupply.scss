@@ -1,0 +1,88 @@
+#petsupply_section{
+    background-color: orange;
+    
+        height: 100vh;
+        
+        background-image: url("/deploy/img/paws.png");
+        background-repeat: no-repeat;
+        
+        display: grid;
+        grid-template-columns: 30px 40% 40% 30px;
+        grid-template-areas: "pet pet2 bod ."
+        "pet pet2 bod .";
+    
+        #petlayout{
+        
+            grid-area: bod;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            height: 100vh;
+            width: 50vw;
+            padding-left: 50px;
+    
+            h1 {
+                display: flex;
+                font-size: 7vw;
+                line-height: 80%;
+            }
+    
+            b {
+                margin-top: 30px;
+            }
+    
+            
+        }
+
+        #buttonContainerPet{
+            grid-area: pet2;
+            
+            z-index: 2000;
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: ". ."
+            ". button"
+            ". .";
+            button{
+                grid-area: button;
+                background-image: url("/deploy/img/petsign.png");
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                margin-right: 40px;
+                margin-left: -200px;
+
+                &:hover{
+                    color: black;
+                    
+                }
+            }
+            a{
+                // height: 300px;
+                // width: 300px;
+                // background-color: red;
+                padding: 110px;
+            }
+            height: 100%;
+            width: 100%;
+        }
+        .petSVG{
+                // display: none;
+                grid-area: ris;
+                padding-top: 100px;
+                
+                margin-left: -70px;
+                height: 70%;
+                z-index: 1;
+                // display: flex;
+                // background-color: white;
+                // justify-content: center;
+                // align-items: center;
+            }
+    
+        img{
+            // display: none;
+        }
+    };
